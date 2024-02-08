@@ -19,8 +19,8 @@ function ChatBot() {
 
   return (
     <div className="App">
-      <h1>Welcome to the Chat Bot</h1>
-      <p>{data}</p>
+      <h1>This is a chat-bot</h1>
+      <div dangerouslySetInnerHTML={{ __html: data }}></div>
     </div>
   );
 }

@@ -1,0 +1,78 @@
+.navbar {
+  /* background-image: url('C:/Users/HP/Downloads/image2vector.svg');  */
+  /* Change the path to your SVG file */
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
+  /* width:100vh; */
+  background-color: red;
+  /* width:100% ; */
+  /* height: 80;  */
+  /* padding: 20px; */
+  /* margin: 20px; */
+  
+}
+
+.navbar-logo {
+  /* color: white; */
+  height:50px;
+}
+
+.image_peng {
+  height:10vh;
+  margin-top: -20px;
+}
+
+.navbar-links a {
+  color: #ffffff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.signin-button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.15s ease;
+}
+
+.navbar-links a {
+  filter: blur(0);
+  transition: 0.15s ease;
+}
+
+.navbar-links:hover a {
+  filter: blur(0.5px);
+  color: rgba(204, 204, 204, 0.758);
+}
+
+.navbar-links a:hover {
+  filter: blur(0);
+  color: #61dafb;
+  box-shadow: 0 2px 0 0 currentcolor;
+}
+
+.navbar-links {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .navbar-links {
+      display: flex;
+      justify-content: flex-end;
+  }
+}

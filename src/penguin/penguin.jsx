@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './penguin.css'; // Import the CSS file
+import { useNavigate } from 'react-router-dom';
 
 function RotatingPenguin() {
   const [isRotating, setRotating] = useState(false);
@@ -7,6 +8,12 @@ function RotatingPenguin() {
   const rotatePenguin = () => {
     setRotating(!isRotating);
   };
+
+ const navigate =useNavigate();
+
+ const handleClick =()=>{
+  navigate('/chatbot')
+ }
 
   return (
     <div className={`penguin ${isRotating ? 'rotate-animation' : ''}`} onClick={rotatePenguin}>
@@ -31,6 +38,9 @@ function RotatingPenguin() {
         </div>
         
         <div className="penguin-body">
+        <div className="chat-button" onClick={handleClick}>
+            Let's Chat 
+          </div>
           <div className="arm left"></div>
           <div className="arm right"></div>
           <div className="foot left"></div>
@@ -41,22 +51,6 @@ function RotatingPenguin() {
   );
 }
 
-// function ChatBot() {
-//   return (
-//     <div className="chatbot">
-//       <div className="chatbot-header">
-//         <h2>Welcome to the Chat Bot</h2>
-//       </div>
-//       <div className="chatbot-messages">
-//         {/* Display chat messages here */}
-//       </div>
-//       <div className="chatbot-input">
-//         <input type="text" placeholder="Type your message..." />
-//         <button>Send</button>
-//       </div>
-//       <RotatingPenguin />
-//     </div>
-//   );
-// }
+
 
 export default RotatingPenguin;
